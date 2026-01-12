@@ -106,50 +106,260 @@
         <section class="py-12">
           <div class="mx-auto max-w-4xl">
             <h1 class="text-4xl font-bold text-sky-400">Privacy Policy</h1>
+
+            <!-- Introduction -->
+            <h2 class="mt-8 text-2xl font-semibold text-sky-400">
+              Introduction
+            </h2>
             <p class="mt-4 text-lg text-white/80">
-              Your privacy is important to us. It is Privacy Lens's policy to
-              respect your privacy regarding any information we may collect from
-              you across our website, and other sites we own and operate.
+              Privacy Lens is a browser extension designed to help users
+              understand website privacy policies by analyzing them and
+              presenting simplified summaries and visual indicators. We respect
+              your privacy and are committed to transparency regarding how data
+              is processed. This Privacy Policy explains what information is
+              accessed, how it is used, and your choices when using the
+              extension.
             </p>
 
+            <!-- When Data Is Processed -->
             <h2 class="mt-8 text-2xl font-semibold text-sky-400">
-              1. Information we collect
+              When Data Is Processed
             </h2>
             <p class="mt-4 text-lg text-white/80">
-              We only ask for personal information when we truly need it to
-              provide a service to you. We collect it by fair and lawful means,
-              with your knowledge and consent. We also let you know why we’re
-              collecting it and how it will be used.
+              Privacy Lens processes data only when you actively interact with
+              the extension, such as clicking the "Scan" button. The extension
+              does not run automatically in the background and does not monitor
+              your browsing activity.
             </p>
 
+            <!-- Information We Process -->
             <h2 class="mt-8 text-2xl font-semibold text-sky-400">
-              2. How we use your information
+              Information We Process
             </h2>
-            <p class="mt-4 text-lg text-white/80">
-              We only retain collected information for as long as necessary to
-              provide you with your requested service. What data we store, we’ll
-              protect within commercially acceptable means to prevent loss and
-              theft, as well as unauthorized access, disclosure, copying, use or
-              modification.
+
+            <h3 class="mt-6 text-xl font-semibold text-sky-300">
+              1. Page Content and URLs
+            </h3>
+            <p class="mt-3 text-lg text-white/80">When you trigger a scan:</p>
+            <ul class="mt-2 ml-6 space-y-2 text-lg text-white/80 list-disc">
+              <li>The extension reads the URL of the currently active tab</li>
+              <li>
+                It searches the page for a link to the website's privacy policy
+              </li>
+              <li>
+                If found, the text of that privacy policy page is extracted
+              </li>
+              <li>
+                This content is sent to our secure backend solely for the
+                purpose of generating a summary and privacy indicators using AI
+              </li>
+            </ul>
+            <p class="mt-3 text-lg text-white/80">
+              <strong>Note:</strong> We do not analyze other website content
+              beyond the privacy policy.
             </p>
 
+            <h3 class="mt-6 text-xl font-semibold text-sky-300">
+              2. Identifiable Data (Anonymous Installation ID)
+            </h3>
+            <p class="mt-3 text-lg text-white/80">
+              A random, non-personally identifiable installation identifier
+              (chrome.runtime.id) is sent to our backend to:
+            </p>
+            <ul class="mt-2 ml-6 space-y-2 text-lg text-white/80 list-disc">
+              <li>Facilitate the AI analysis service</li>
+              <li>Apply basic rate limiting</li>
+              <li>Prevent abuse of the service</li>
+            </ul>
+            <p class="mt-3 text-lg text-white/80">This identifier:</p>
+            <ul class="mt-2 ml-6 space-y-2 text-lg text-white/80 list-disc">
+              <li>Does not reveal your identity</li>
+              <li>Is not linked to personal information</li>
+              <li>Is not used for tracking or advertising</li>
+            </ul>
+
+            <h3 class="mt-6 text-xl font-semibold text-sky-300">
+              3. AI Processing
+            </h3>
+            <p class="mt-3 text-lg text-white/80">
+              The extracted privacy policy text is processed by an AI model to:
+            </p>
+            <ul class="mt-2 ml-6 space-y-2 text-lg text-white/80 list-disc">
+              <li>Generate simplified summaries</li>
+              <li>
+                Determine which privacy-related icons should be displayed (e.g.
+                data collection, sharing, usage)
+              </li>
+            </ul>
+            <p class="mt-3 text-lg text-white/80">
+              Data sent to the backend is processed transiently, only for the
+              duration required to generate the analysis, and is not retained.
+            </p>
+
+            <!-- Local Storage -->
             <h2 class="mt-8 text-2xl font-semibold text-sky-400">
-              3. Data Security
+              Local Storage
+            </h2>
+            <p class="mt-4 text-lg text-white/80">The extension stores:</p>
+            <ul class="mt-2 ml-6 space-y-2 text-lg text-white/80 list-disc">
+              <li>Generated summaries</li>
+              <li>Scan status for previously analyzed websites</li>
+            </ul>
+            <p class="mt-3 text-lg text-white/80">
+              This data is stored locally on your device using chrome.storage.
+              No analysis results are stored on our servers.
+            </p>
+
+            <!-- Information We Do NOT Collect -->
+            <h2 class="mt-8 text-2xl font-semibold text-sky-400">
+              Information We Do NOT Collect
+            </h2>
+            <p class="mt-4 text-lg text-white/80">Privacy Lens does not:</p>
+            <ul class="mt-2 ml-6 space-y-2 text-lg text-white/80 list-disc">
+              <li>Collect names, email addresses, or account information</li>
+              <li>Track browsing history</li>
+              <li>Collect passwords, form inputs, or authentication data</li>
+              <li>Collect precise location data</li>
+              <li>Build user profiles</li>
+              <li>
+                Sell, rent, or share personal data for advertising or marketing
+                purposes
+              </li>
+            </ul>
+
+            <!-- Data Sharing -->
+            <h2 class="mt-8 text-2xl font-semibold text-sky-400">
+              Data Sharing
             </h2>
             <p class="mt-4 text-lg text-white/80">
-              We don’t share any personally identifying information publicly or
-              with third-parties, except when required to by law.
+              Privacy Lens does not sell or trade user data. Data may be
+              processed by:
             </p>
+            <ul class="mt-2 ml-6 space-y-2 text-lg text-white/80 list-disc">
+              <li>Our secure backend infrastructure</li>
+              <li>
+                Third-party AI service providers used exclusively to generate
+                summaries
+              </li>
+            </ul>
+            <p class="mt-3 text-lg text-white/80">
+              These parties act solely as data processors and only for the
+              functionality explicitly initiated by the user.
+            </p>
+
+            <!-- Permissions Justification -->
             <h2 class="mt-8 text-2xl font-semibold text-sky-400">
-              4. Changes to This Privacy Policy
+              Permissions Justification
             </h2>
             <p class="mt-4 text-lg text-white/80">
-              We may update our Privacy Policy from time to time. We will notify
-              you of any changes by posting the new Privacy Policy on this page.
-              You are advised to review this Privacy Policy periodically for any
-              changes. Changes to this Privacy Policy are effective when they
-              are posted on this page.
+              The extension requires the following permissions:
             </p>
+
+            <div class="mt-4 ml-6 space-y-4">
+              <div>
+                <h4 class="text-lg font-semibold text-sky-300">activeTab</h4>
+                <p class="mt-1 text-lg text-white/80">
+                  Required to access the URL and content of the specific tab you
+                  are currently viewing when you open the extension. This allows
+                  the extension to locate and analyze the privacy policy without
+                  accessing your broader browsing activity.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-lg font-semibold text-sky-300">scripting</h4>
+                <p class="mt-1 text-lg text-white/80">
+                  Required to inject a content script into the active page in
+                  order to locate the "Privacy Policy" link within the page's
+                  DOM. This powers the core "Scan" functionality.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-lg font-semibold text-sky-300">storage</h4>
+                <p class="mt-1 text-lg text-white/80">
+                  Required to save generated privacy summaries and scan status
+                  locally on your device, so you don't need to re-scan the same
+                  website every time.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-lg font-semibold text-sky-300">
+                  Backend API Access
+                </h4>
+                <p class="mt-1 text-lg text-white/80">
+                  Required to securely send the extracted privacy policy text to
+                  our backend for AI processing and summarization.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-lg font-semibold text-sky-300">
+                  https://openrouter.ai/
+                </h4>
+                <p class="mt-1 text-lg text-white/80">
+                  Required to communicate with the Large Language Model provider
+                  used to generate privacy summaries and data collection
+                  indicators.
+                </p>
+              </div>
+            </div>
+
+            <!-- Compliance -->
+            <h2 class="mt-8 text-2xl font-semibold text-sky-400">
+              Compliance With Chrome Web Store Policies
+            </h2>
+            <p class="mt-4 text-lg text-white/80">
+              Privacy Lens complies with the Chrome Web Store User Data Policy,
+              including the Limited Use requirements. Data accessed is used
+              strictly to provide the extension's core functionality and for no
+              other purpose.
+            </p>
+
+            <!-- User Control -->
+            <h2 class="mt-8 text-2xl font-semibold text-sky-400">
+              User Control
+            </h2>
+            <ul class="mt-4 ml-6 space-y-2 text-lg text-white/80 list-disc">
+              <li>The extension runs only when you choose to use it</li>
+              <li>No automatic or background analysis occurs</li>
+              <li>
+                You may uninstall the extension at any time to stop all
+                processing
+              </li>
+            </ul>
+
+            <!-- Security -->
+            <h2 class="mt-8 text-2xl font-semibold text-sky-400">Security</h2>
+            <p class="mt-4 text-lg text-white/80">
+              We take reasonable measures to protect processed data, including:
+            </p>
+            <ul class="mt-2 ml-6 space-y-2 text-lg text-white/80 list-disc">
+              <li>Secure backend communication</li>
+              <li>Keeping API credentials off the client side</li>
+              <li>Limiting backend access to required functionality only</li>
+            </ul>
+
+            <!-- Contact -->
+            <h2 class="mt-8 text-2xl font-semibold text-sky-400">Contact</h2>
+            <p class="mt-4 text-lg text-white/80">
+              If you have questions or concerns about this Privacy Policy or
+              Privacy Lens, please contact:
+            </p>
+            <ul class="mt-2 ml-6 space-y-2 text-lg text-white/80 list-disc">
+              <li>Email: salomarblhmr@gmail.com</li>
+            </ul>
+
+            <!-- Agreement -->
+            <div class="mt-8 p-4 bg-sky-400/10 border-l-4 border-sky-400">
+              <p class="text-lg text-white/80">
+                <strong
+                  >By using Privacy Lens, you agree to this Privacy
+                  Policy.</strong
+                >
+              </p>
+            </div>
           </div>
         </section>
       </div>
