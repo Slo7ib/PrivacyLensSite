@@ -3,485 +3,1080 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Privacy Lens is a free Chrome extension and AI privacy policy summarizer that scans policies, explains data collection and sharing, and works as a website privacy checker and privacy transparency tool—right in your browser."
+    />
+    <meta
+      name="keywords"
+      content="AI privacy policy summarizer, privacy policy analyzer, Chrome privacy extension, AI privacy scanner, privacy policy summary tool, data collection analyzer, website privacy checker, AI browser privacy assistant, terms and privacy summarizer, privacy transparency tool"
+    />
+    <meta name="author" content="Saleh Blhmr" />
+    <meta name="theme-color" content="#0b1f2a" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://slo7ib.github.io/PrivacyLensSite/"
+    />
+    <meta
+      property="og:title"
+      content="Privacy Lens | AI Privacy Policy Summarizer for Chrome"
+    />
+    <meta
+      property="og:description"
+      content="Scan privacy policies with AI: clear summaries, data use, third parties, and visual indicators. A fast privacy policy analyzer and Chrome privacy extension."
+    />
+    <meta
+      property="og:url"
+      content="https://slo7ib.github.io/PrivacyLensSite/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:image"
+      content="https://slo7ib.github.io/PrivacyLensSite/icons/icon-128.png"
+    />
+    <meta property="og:image:alt" content="Privacy Lens Chrome extension logo" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Privacy Lens | AI Privacy Policy Summarizer for Chrome"
+    />
+    <meta
+      name="twitter:description"
+      content="AI-powered privacy policy summaries, data collection insights, and sharing transparency—in Chrome."
+    />
+    <meta
+      name="twitter:image"
+      content="https://slo7ib.github.io/PrivacyLensSite/icons/icon-128.png"
+    />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/PrivacyLensSite/assets/icon-32-JOTLkkSQ.png"
+      href="/PrivacyLensSite/icons/icon-32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/PrivacyLensSite/assets/icon-16-DK37oOZ4.png"
+      href="/PrivacyLensSite/icons/icon-16.png"
     />
-    <title>Privacy Lens</title>
-    <script type="module" crossorigin src="/PrivacyLensSite/assets/main-BEI3yMhg.js"></script>
-    <link rel="stylesheet" crossorigin href="/PrivacyLensSite/assets/main-BDwjexCq.css">
+    <title>
+      Privacy Lens — AI Privacy Policy Summarizer &amp; Chrome Privacy
+      Extension
+    </title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://slo7ib.github.io/PrivacyLensSite/#website",
+            "name": "Privacy Lens",
+            "url": "https://slo7ib.github.io/PrivacyLensSite/",
+            "description": "Official site for the Privacy Lens Chrome extension—an AI privacy scanner and privacy policy summary tool.",
+            "publisher": {
+              "@id": "https://slo7ib.github.io/PrivacyLensSite/#organization"
+            },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://slo7ib.github.io/PrivacyLensSite/#organization",
+            "name": "Privacy Lens",
+            "url": "https://slo7ib.github.io/PrivacyLensSite/"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://slo7ib.github.io/PrivacyLensSite/#app",
+            "name": "Privacy Lens",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "url": "https://slo7ib.github.io/PrivacyLensSite/",
+            "installUrl": "https://chromewebstore.google.com/detail/pdhcffjpfhnjkapmpeeepnnanjcmgcej",
+            "description": "Privacy Lens is a Chrome extension that scans website privacy policies and uses AI to summarize what data is collected, how it is used, who it is shared with, and surfaces visual privacy indicators.",
+            "image": "https://slo7ib.github.io/PrivacyLensSite/icons/icon-128.png",
+            "publisher": {
+              "@id": "https://slo7ib.github.io/PrivacyLensSite/#organization"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://slo7ib.github.io/PrivacyLensSite/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is Privacy Lens?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Privacy Lens is a free Chrome extension that acts as an AI browser privacy assistant. It finds a site’s privacy policy, analyzes it with AI, and presents a plain-language privacy policy summary plus structured signals about data collection, use, and sharing."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does Privacy Lens summarize privacy policies?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "When you use the extension on a supported page, it helps locate the policy text and runs an AI-powered analysis to extract the parts most people care about: categories of data, purposes, retention hints where available, and third parties. Results are shown as readable summaries and visual privacy indicators."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Privacy Lens only available as a Chrome privacy extension?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Today, Privacy Lens is distributed on the Chrome Web Store for Chromium-based Chrome browsers. Other browsers are not officially supported yet."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Privacy Lens a privacy policy analyzer or a website privacy checker?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It functions as both in practice: it is a privacy policy analyzer focused on policy text, and a website privacy checker in the sense that it helps you quickly understand a site’s stated practices before you proceed on that site."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Privacy Lens help with terms of service as well?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The product is optimized around privacy policies. Depending on the site and version, related legal pages may be less thoroughly covered than the primary privacy policy."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Privacy Lens free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Privacy Lens is offered as a free extension. Optional donations may be available to support development, but core functionality is aimed at staying accessible."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Privacy Lens replace reading the full policy or legal advice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Privacy Lens is an informational assistant designed to improve transparency and save time. It does not replace your own review, company disclosures, or professional legal advice where that is required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How should I interpret AI-generated summaries?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "AI outputs can be incomplete or imperfect—especially when a policy is vague, changes frequently, or uses non-standard language. Use summaries as a starting point and verify important details on critical flows like payments, health, or children’s data."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where can I read Privacy Lens privacy practices and updates?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use the Privacy Policy and What’s New pages linked in the site footer and navigation. Those pages describe site/extension policies and release notes context."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where do I install Privacy Lens?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Install Privacy Lens from the official Chrome Web Store listing linked from this page. Prefer the official store URL to avoid impersonation."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="/PrivacyLensSite/assets/main-D5nEa_67.js"></script>
+    <link rel="stylesheet" crossorigin href="/PrivacyLensSite/assets/main-B9ys9hol.css">
   </head>
   <body
-    class="relative min-h-screen bg-linear-to-br from-[#0b1f2a] to-[#020407]"
+    class="relative min-h-screen bg-linear-to-br from-[#0b1f2a] to-[#020407] text-[var(--color-fg)] antialiased"
   >
     <div
-      class="pointer-events-none fixed inset-0 bg-[url('/hex.svg')] bg-repeat opacity-[0.08]"
+      class="pointer-events-none fixed inset-0 bg-hex-grid bg-repeat opacity-[0.08]"
+      aria-hidden="true"
     ></div>
     <div
       class="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl"
+      aria-hidden="true"
     ></div>
-    <!-- Content -->
-    <main>
-      <div id="home" class="mx-auto max-w-7xl px-6 text-white">
-        <header
-          class="sticky top-0 z-50 mt-1.5 rounded-lg border-b border-white/20 bg-white/10 shadow-lg backdrop-blur-md md:rounded-full"
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header
+      class="sticky top-0 z-50 border-b border-white/10 bg-[#0b1f2a]/80 shadow-lg backdrop-blur-md"
+    >
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a
+          href="/PrivacyLensSite/"
+          class="flex flex-shrink-0 items-center gap-2 rounded-lg outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-400"
         >
-          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between py-4">
-              <!-- Logo Section -->
-              <div class="flex flex-shrink-0 items-center gap-2">
-                <img
-                  class="h-12 w-12 sm:h-14 sm:w-14"
-                  src="/PrivacyLensSite/assets/icon-128-DYqFPOcu.png"
-                  alt="Privacy Lens"
-                />
-                <a href="index.html"
-                  ><h1 class="text-xl font-bold text-white sm:text-2xl">
-                    Privacy Lens
-                  </h1></a
-                >
-              </div>
+          <img
+            class="h-10 w-10 sm:h-12 sm:w-12"
+            src="/PrivacyLensSite/icons/icon-128.png"
+            width="48"
+            height="48"
+            alt="Privacy Lens extension icon"
+          />
+          <span class="text-lg font-bold tracking-tight text-white sm:text-xl"
+            >Privacy Lens</span>
+        </a>
 
-              <!-- Desktop Navigation -->
-              <nav class="hidden items-center space-x-8 md:flex">
-                <a
-                  href="#services"
-                  class="font-medium text-white/90 transition-colors duration-200 hover:text-sky-400"
-                >
-                  Services
-                </a>
-                <a
-                  href="src/pages/whatsNew.html"
-                  class="font-medium text-white/90 transition-colors duration-200 hover:text-sky-400"
-                >
-                  What's New
-                </a>
-                <a
-                  href="src/pages/privacyPolicy.html"
-                  class="font-medium text-white/90 transition-colors duration-200 hover:text-sky-400"
-                >
-                  Privacy Policy
-                </a>
-              </nav>
-
-              <!-- Desktop Donate Button -->
-              <div class="hidden md:block">
-                <button
-                  class="transform shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                >
-                  <script
-                    class=""
-                    type="text/javascript"
-                    src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-                    data-name="bmc-button"
-                    data-slug="SalehOmar"
-                    data-color="#FFDD00"
-                    data-emoji=""
-                    data-font="Cookie"
-                    data-text="Buy me a coffee"
-                    data-outline-color="#000000"
-                    data-font-color="#000000"
-                    data-coffee-color="#ffffff"
-                  ></script>
-                </button>
-              </div>
-
-              <!-- Mobile Menu Button -->
-              <button id="mobile-menu-btn" class="p-2 text-white md:hidden">
-                <svg
-                  class="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
-            </div>
-
-            <!-- Mobile Navigation -->
-            <nav id="mobile-menu" class="hidden space-y-3 pb-4 md:hidden">
-              <a
-                href="#services"
-                class="block rounded-lg px-4 py-2 text-white/90 transition-all duration-200 hover:bg-white/10 hover:text-white"
-              >
-                Services
-              </a>
-              <a
-                href="src/pages/whatsNew.html"
-                class="block rounded-lg px-4 py-2 text-white/90 transition-all duration-200 hover:bg-white/10 hover:text-white"
-              >
-                What's New
-              </a>
-              <a
-                href="src/pages/privacyPolicy.html"
-                class="block rounded-lg px-4 py-2 text-white/90 transition-all duration-200 hover:bg-white/10 hover:text-white"
-              >
-                Privacy Policy
-              </a>
-              <button class="w-full shadow-lg transition-all duration-300">
-                <script
-                  class=""
-                  type="text/javascript"
-                  src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-                  data-name="bmc-button"
-                  data-slug="SalehOmar"
-                  data-color="#FFDD00"
-                  data-emoji=""
-                  data-font="Cookie"
-                  data-text="Buy me a coffee"
-                  data-outline-color="#000000"
-                  data-font-color="#000000"
-                  data-coffee-color="#ffffff"
-                ></script>
-              </button>
-            </nav>
-          </div>
-        </header>
-
-        <section
-          class="mt-11 flex h-3/5 w-full flex-col items-center text-center"
+        <nav
+          class="hidden items-center gap-6 text-sm font-medium text-white/90 md:flex"
+          aria-label="Primary"
         >
-          <article>
-            <h1
-              class="px-4 sm:px-16 md:px-56 font-sans text-3xl font-bold text-nowrap md:text-6xl md:text-wrap"
-            >
-              <span class="text-sky-400">Find</span> what data <br />websites
-              collect from you
-            </h1>
-          </article>
-          <!-- mt-2 w-2/5 -->
-          <p class="mt-2 w-full md:px-48">
-            No more scrolling through 5,000 words of legal text. this FREE
-            extension scans any website & shows you with AI what data it
-            collects, how it's used, how it gets shared.
+          <a
+            href="#what-is-privacy-lens"
+            class="transition-colors hover:text-sky-400"
+            >What it is</a>
+          <a href="#how-it-works" class="transition-colors hover:text-sky-400"
+            >How it works</a>
+          <a href="#features" class="transition-colors hover:text-sky-400"
+            >Features</a>
+          <a href="#faq" class="transition-colors hover:text-sky-400">FAQ</a>
+          <a
+            href="/PrivacyLensSite/src/pages/whatsNew.html"
+            class="transition-colors hover:text-sky-400"
+            >What’s New</a>
+          <a
+            href="/PrivacyLensSite/src/pages/privacyPolicy.html"
+            class="transition-colors hover:text-sky-400"
+            >Privacy Policy</a>
+          <a
+            class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-white transition-colors hover:border-sky-400/60 hover:text-sky-300"
+            href="https://www.buymeacoffee.com/SalehOmar"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Support</a>
+          <a
+            class="rounded-full bg-gradient-to-br from-sky-400 to-sky-600 px-4 py-2 font-semibold text-slate-950 shadow-sm transition-transform hover:scale-[1.02]"
+            href="https://chromewebstore.google.com/detail/pdhcffjpfhnjkapmpeeepnnanjcmgcej?utm_source=item-share-cb"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Add to Chrome</a>
+        </nav>
+
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="rounded-lg p-2 text-white md:hidden"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Open menu"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <nav
+        id="mobile-menu"
+        class="hidden border-t border-white/10 bg-[#0b1f2a]/95 px-4 py-3 md:hidden"
+        aria-label="Mobile primary"
+      >
+        <div class="flex flex-col gap-2 text-sm font-medium text-white/90">
+          <a class="rounded-lg px-2 py-2 hover:bg-white/10" href="#what-is-privacy-lens"
+            >What it is</a>
+          <a class="rounded-lg px-2 py-2 hover:bg-white/10" href="#how-it-works"
+            >How it works</a>
+          <a class="rounded-lg px-2 py-2 hover:bg-white/10" href="#features"
+            >Features</a>
+          <a class="rounded-lg px-2 py-2 hover:bg-white/10" href="#faq">FAQ</a>
+          <a
+            class="rounded-lg px-2 py-2 hover:bg-white/10"
+            href="/PrivacyLensSite/src/pages/whatsNew.html"
+            >What’s New</a>
+          <a
+            class="rounded-lg px-2 py-2 hover:bg-white/10"
+            href="/PrivacyLensSite/src/pages/privacyPolicy.html"
+            >Privacy Policy</a>
+          <a
+            class="rounded-lg px-2 py-2 hover:bg-white/10"
+            href="https://www.buymeacoffee.com/SalehOmar"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Support the project</a>
+          <a
+            class="mt-1 rounded-full bg-sky-400 px-3 py-3 text-center font-semibold text-slate-950"
+            href="https://chromewebstore.google.com/detail/pdhcffjpfhnjkapmpeeepnnanjcmgcej?utm_source=item-share-cb"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Add to Chrome</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section
+        class="mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-24 lg:pt-14"
+        aria-labelledby="hero-heading"
+      >
+        <div class="mx-auto max-w-4xl text-center">
+          <p
+            class="text-xs font-semibold uppercase tracking-[0.2em] text-sky-300/90 sm:text-sm"
+          >
+            AI privacy scanner · Privacy policy summary tool · Chrome
           </p>
-
-          <div class="flex justify-center md:w-3/4">
-            <video
-              class="flex my-3 rounded-2xl"
-              controls
-              src="/PrivacyLensSite/assets/demo-CpvJI2oq.mp4"
-            ></video>
+          <h1
+            id="hero-heading"
+            class="mt-4 text-balance text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
+          >
+            Turn webistes' legal walls of text
+            into clear icons and summaries
+          </h1>
+          <p class="mx-auto mt-5 max-w-2xl text-pretty text-base leading-relaxed text-white/80 sm:text-lg">
+            Privacy Lens is an <strong class="font-semibold text-white">AI-powered privacy policy analyzer</strong> that instantly reveals what websites collect, how they use your data, and who they share it with.
+            Instead of reading long legal documents, you get <strong class="font-semibold text-white">clear, visual insights</strong> with simple icons and plain-English explanations — directly while you browse.
+            Understand tracking, data sharing, and hidden practices in seconds, and decide whether a website deserves your trust before you click “Agree”.
+          </p>
+          <div
+            class="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:justify-center"
+          >
+            <a
+              class="inline-flex items-center justify-center rounded-full bg-gradient-to-br from-sky-400 to-sky-600 px-8 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-sky-500/25 transition-transform hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
+              href="https://chromewebstore.google.com/detail/pdhcffjpfhnjkapmpeeepnnanjcmgcej?utm_source=item-share-cb"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Install Privacy Lens — Chrome Web Store</a>
+            <a
+              class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-3 text-base font-semibold text-white transition-colors hover:border-sky-400/50 hover:text-sky-200"
+              href="#how-it-works"
+              >See how it works</a>
           </div>
-          <article class="mt-6 flex flex-col">
-            <div class="mb-1.5 flex flex-row justify-center space-x-14">
-              <button
-                class="relative inline-flex w-1/5 cursor-pointer items-center justify-center rounded-full border-2 border-slate-700 bg-gradient-to-br from-sky-400 to-slate-900 px-8 py-3 text-xl font-semibold text-white transition-all duration-500 ease-in-out hover:scale-105 hover:border-2 hover:border-sky-400 hover:bg-slate-900 hover:bg-none hover:shadow-[0_0_40px_rgba(56,189,248,0.55)]"
-              >
-                <a
-                  href="https://chromewebstore.google.com/detail/pdhcffjpfhnjkapmpeeepnnanjcmgcej?utm_source=item-share-cb"
-                  >Install</a
-                >
-              </button>
-              <div
-                class="transform transition-all duration-300 hover:scale-105"
-              >
-                <script
-                  type="text/javascript"
-                  src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-                  data-name="bmc-button"
-                  data-slug="SalehOmar"
-                  data-color="#FFDD00"
-                  data-emoji=""
-                  data-font="Cookie"
-                  data-text="Buy me a coffee"
-                  data-outline-color="#000000"
-                  data-font-color="#000000"
-                  data-coffee-color="#ffffff"
-                ></script>
-              </div>
-            </div>
+          <p class="mt-4 text-sm text-white/60">
+            Built for people who want a serious
+            <span class="text-white/80">privacy transparency tool</span> without
+            reading 5,000 words on every new tab.
+          </p>
+        </div>
 
-            <p>
-              Only available on Chrome browsers for now, your donation matter
-              and helps keep it free
+        <figure
+          class="mx-auto mt-12 max-w-4xl overflow-hidden rounded-2xl border border-white/10 bg-black/30 shadow-2xl shadow-black/40"
+        >
+          <video
+            class="aspect-video w-full object-cover"
+            controls
+            playsinline
+            preload="metadata"
+            poster="/PrivacyLensSite/images/demo.PNG"
+            aria-label="Screen recording demonstrating the Privacy Lens Chrome extension analyzing a website privacy policy"
+          >
+            <source src="/PrivacyLensSite/images/demo.mp4" type="video/mp4" />
+            Your browser does not support embedded video. Open the Chrome Web
+            Store listing to see screenshots and install the extension.
+          </video>
+          <figcaption class="border-t border-white/10 px-4 py-3 text-left text-sm text-white/65">
+            Demo: Privacy Lens helping you understand policy language faster than
+            manual review.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section
+        id="mid-cta"
+        class="border-y border-white/10 bg-white/[0.04] py-10"
+        aria-label="Install call to action"
+      >
+        <div
+          class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 px-4 sm:flex-row sm:items-center sm:px-6 lg:px-8"
+        >
+          <div>
+            <h2 class="text-xl font-semibold text-white sm:text-2xl">
+              Ready to try an AI privacy scanner in your browser?
+            </h2>
+            <p class="mt-1 max-w-2xl text-sm text-white/70 sm:text-base">
+              Add Privacy Lens from the official Chrome Web Store and get instant
+              policy context on supported sites.
+            </p>
+          </div>
+          <a
+            class="inline-flex shrink-0 items-center justify-center rounded-full bg-sky-400 px-6 py-3 font-semibold text-slate-950 transition-transform hover:scale-[1.02]"
+            href="https://chromewebstore.google.com/detail/pdhcffjpfhnjkapmpeeepnnanjcmgcej?utm_source=item-share-cb"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Add to Chrome</a>
+        </div>
+      </section>
+
+      <section
+        id="what-is-privacy-lens"
+        class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20"
+        aria-labelledby="what-is-heading"
+      >
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
+          <div>
+            <h2
+              id="what-is-heading"
+              class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            >
+              What is Privacy Lens?
+            </h2>
+            <p class="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
+              Privacy Lens is a
+              <strong class="font-semibold text-white">Chrome privacy extension</strong>
+              that helps you understand what websites say they do with your data.
+              It is designed as an
+              <strong class="font-semibold text-white">AI browser privacy assistant</strong>:
+              it highlights collection, purposes, and sharing in plain language—plus
+              visual cues—so you can decide whether a site deserves your trust.
+            </p>
+            <p class="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
+              If you have searched for a
+              <strong class="font-semibold text-white">privacy policy summary tool</strong>,
+              a
+              <strong class="font-semibold text-white">website privacy checker</strong>,
+              or a
+              <strong class="font-semibold text-white">terms and privacy summarizer</strong>
+              workflow, Privacy Lens is built around the same job-to-be-done: reduce
+              friction between you and the policy text publishers already published.
+            </p>
+          </div>
+          <aside
+            class="rounded-2xl border border-white/10 bg-white/[0.03] p-6 shadow-lg"
+            aria-label="At a glance"
+          >
+            <h3 class="text-lg font-semibold text-sky-300">At a glance</h3>
+            <ul class="mt-4 space-y-3 text-sm text-white/80">
+              <li class="flex gap-2">
+                <span class="text-sky-400" aria-hidden="true">✓</span>
+                <span>AI-assisted summaries of privacy policy content</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-sky-400" aria-hidden="true">✓</span>
+                <span>Signals for data collected, usage, and sharing</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-sky-400" aria-hidden="true">✓</span>
+                <span>Visual privacy indicators to scan faster</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-sky-400" aria-hidden="true">✓</span>
+                <span>Designed for Chrome; install from the Web Store</span>
+              </li>
+            </ul>
+            <p class="mt-6 text-xs leading-relaxed text-white/55">
+              This website is static marketing content. Extension behavior,
+              permissions, and data handling are described in the extension’s own
+              disclosures and the linked
+              <a
+                class="text-sky-400 underline underline-offset-2 hover:text-sky-300"
+                href="/PrivacyLensSite/src/pages/privacyPolicy.html"
+                >Privacy Policy</a>
+              page.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section
+        id="how-it-works"
+        class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20"
+        aria-labelledby="how-heading"
+      >
+        <h2
+          id="how-heading"
+          class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+        >
+          How it works
+        </h2>
+        <p class="mt-3 max-w-3xl text-base text-white/75 sm:text-lg">
+          A simple flow engineered for scanning and comprehension—not for replacing
+          your judgment.
+        </p>
+        <ol
+          class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          role="list"
+        >
+          <li class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <p class="text-sm font-semibold text-sky-300">Step 1</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Detect the policy</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">
+              Privacy Lens works in the browser context to help locate relevant
+              privacy policy text for the site you are evaluating.
+            </p>
+          </li>
+          <li class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <p class="text-sm font-semibold text-sky-300">Step 2</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Analyze with AI</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">
+              The extension applies AI to extract the parts that map to real user
+              questions: what is collected, why, and who receives it.
+            </p>
+          </li>
+          <li class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <p class="text-sm font-semibold text-sky-300">Step 3</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Summarize clearly</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">
+              You get readable summaries instead of dense legal boilerplate—ideal
+              when you want a fast read before you sign up, pay, or share sensitive
+              info.
+            </p>
+          </li>
+          <li class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <p class="text-sm font-semibold text-sky-300">Step 4</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Visualize risk cues</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">
+              Icons and indicators help you scan quickly and compare sites with a
+              consistent mental model.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section
+        id="features"
+        class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20"
+        aria-labelledby="features-heading"
+      >
+        <h2
+          id="features-heading"
+          class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+        >
+          Features built for transparency
+        </h2>
+        <p class="mt-3 max-w-3xl text-base text-white/75 sm:text-lg">
+          Privacy Lens focuses on the questions people actually ask from a privacy
+          policy analyzer.
+        </p>
+        <div class="mt-10 grid gap-6 lg:grid-cols-3">
+          <article
+            class="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+          >
+            <h3 class="text-lg font-semibold text-white">
+              Privacy policy summaries
+            </h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/70">
+              Turn long disclosures into short, structured explanations—your
+              <strong class="font-semibold text-white/90">AI privacy policy summarizer</strong>
+              layer for everyday browsing.
             </p>
           </article>
-        </section>
-
-        <section
-          id="services"
-          class="relative isolate overflow-hidden px-6 py-8 sm:py-12 lg:overflow-visible lg:px-0"
-        >
-          <div
-            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10"
+          <article
+            class="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
           >
-            <div
-              class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8"
-            >
-              <div class="lg:pr-4">
-                <div class="lg:max-w-lg">
-                  <p
-                    class="text-base/7 font-thin tracking-widest text-white uppercase"
-                  >
-                    Services
-                  </p>
-                  <h1
-                    class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl"
-                  >
-                    Why use our extension?
-                  </h1>
-                  <p class="mt-6 text-xl/8 text-white">
-                    Privacy policies are long, vague, and intentionally hard to
-                    understand. Privacy Lens turns them into something humans
-                    can actually read—in seconds, directly in your browser. We
-                    scan a website’s privacy policy, analyze it with AI, and
-                    present the results as clear summaries and intuitive
-                    icons—so you know exactly what’s happening with your data
-                    before you trust a site.
-                  </p>
-                </div>
-              </div>
+            <h3 class="text-lg font-semibold text-white">
+              Data collection clarity
+            </h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/70">
+              See what categories of data are described as collected and for what
+              purposes—useful when you are comparing vendors or signing up for a new
+              service.
+            </p>
+          </article>
+          <article
+            class="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+          >
+            <h3 class="text-lg font-semibold text-white">
+              Sharing and third parties
+            </h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/70">
+              Understand “who gets access” beyond the first-party site: partners,
+              analytics providers, ad tech, and other recipients when stated in the
+              policy.
+            </p>
+          </article>
+          <article
+            class="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+          >
+            <h3 class="text-lg font-semibold text-white">
+              Visual privacy indicators
+            </h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/70">
+              Icons and visual signals help you skim faster than paragraphs alone—
+              especially when you are tired or on mobile.
+            </p>
+          </article>
+          <article
+            class="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+          >
+            <h3 class="text-lg font-semibold text-white">
+              In-browser workflow
+            </h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/70">
+              Designed to reduce tab-hopping and copy/paste loops while you decide
+              whether to continue on a site.
+            </p>
+          </article>
+          <article
+            class="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+          >
+            <h3 class="text-lg font-semibold text-white">Chrome-first distribution</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/70">
+              Install from the Chrome Web Store and stay on the official listing for
+              updates and integrity signals.
+            </p>
+          </article>
+        </div>
+
+        <div class="mt-12 grid items-start gap-8 lg:grid-cols-2">
+          <div>
+            <h3 class="text-2xl font-semibold text-white">See it in context</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/70">
+              A representative screenshot of the extension experience helps you
+              understand the product UI before installing.
+            </p>
+          </div>
+          <img
+            src="/PrivacyLensSite/images/demo.PNG"
+            alt="Screenshot of the Privacy Lens Chrome extension showing summarized privacy policy insights and visual indicators"
+            class="w-full rounded-2xl border border-white/10 bg-black/30 object-cover shadow-xl"
+            width="1200"
+            height="675"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </section>
+
+      <section
+        id="why-use-it"
+        class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20"
+        aria-labelledby="why-heading"
+      >
+        <h2
+          id="why-heading"
+          class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+        >
+          Why use Privacy Lens?
+        </h2>
+        <div class="mt-8 grid gap-6 lg:grid-cols-3">
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <h3 class="text-lg font-semibold text-sky-300">Save time</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">
+              Policies are long by design. Privacy Lens compresses reading time by
+              pointing you to the highest-signal clauses first.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <h3 class="text-lg font-semibold text-sky-300">Reduce ambiguity</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">
+              Legal language hides uncertainty. The extension highlights what is
+              explicitly stated—and where the policy is vague.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <h3 class="text-lg font-semibold text-sky-300">Make better decisions</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">
+              Use summaries as an input to consent: sign-ups, purchases, location
+              sharing, and “free” services funded by data.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="comparison"
+        class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20"
+        aria-labelledby="compare-heading"
+      >
+        <h2
+          id="compare-heading"
+          class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+        >
+          Reading policies manually vs Privacy Lens
+        </h2>
+        <p class="mt-3 max-w-3xl text-base text-white/75 sm:text-lg">
+          This comparison explains the practical difference for most users—not a
+          claim of legal completeness.
+        </p>
+        <div class="mt-8 overflow-x-auto rounded-2xl border border-white/10">
+          <table class="min-w-[640px] w-full border-collapse text-left text-sm">
+            <caption class="sr-only">
+              Comparison between manual privacy policy reading and using Privacy
+              Lens
+            </caption>
+            <thead class="bg-white/[0.06] text-white">
+              <tr>
+                <th scope="col" class="px-4 py-3 font-semibold">Topic</th>
+                <th scope="col" class="px-4 py-3 font-semibold">
+                  Manual reading
+                </th>
+                <th scope="col" class="px-4 py-3 font-semibold">
+                  With Privacy Lens
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/10 text-white/75">
+              <tr class="bg-white/[0.02]">
+                <th scope="row" class="px-4 py-3 font-medium text-white">
+                  Time to first useful answer
+                </th>
+                <td class="px-4 py-3">Often 10–30+ minutes per site</td>
+                <td class="px-4 py-3">
+                  Typically much faster for a first-pass understanding
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="px-4 py-3 font-medium text-white">
+                  Consistency
+                </th>
+                <td class="px-4 py-3">Depends on your patience and expertise</td>
+                <td class="px-4 py-3">
+                  Applies a repeatable model across many sites
+                </td>
+              </tr>
+              <tr class="bg-white/[0.02]">
+                <th scope="row" class="px-4 py-3 font-medium text-white">
+                  Finding sharing + third parties
+                </th>
+                <td class="px-4 py-3">Easy to miss scattered disclosures</td>
+                <td class="px-4 py-3">
+                  Surfaces sharing-related signals when present in the policy text
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="px-4 py-3 font-medium text-white">
+                  Mobile reading experience
+                </th>
+                <td class="px-4 py-3">Tiny text, lots of scrolling</td>
+                <td class="px-4 py-3">
+                  Summaries and visuals are easier to scan on small screens
+                </td>
+              </tr>
+              <tr class="bg-white/[0.02]">
+                <th scope="row" class="px-4 py-3 font-medium text-white">
+                  Legal certainty
+                </th>
+                <td class="px-4 py-3">You can still miss nuances</td>
+                <td class="px-4 py-3">
+                  Still not legal advice; verify critical details when it matters
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section
+        id="trust"
+        class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-12"
+        aria-labelledby="trust-heading"
+      >
+        <h2 id="trust-heading" class="sr-only">Trust and safety notes</h2>
+        <div
+          class="rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-6 sm:p-8"
+        >
+          <div class="grid gap-6 lg:grid-cols-3 lg:items-center">
+            <div class="lg:col-span-2">
+              <p class="text-lg font-semibold text-white">Trust-first positioning</p>
+              <p class="mt-2 text-sm leading-relaxed text-white/70">
+                Privacy tools should be understandable. This page is intentionally
+                explicit about what Privacy Lens is for, what it is not, and where
+                to read the extension’s disclosures. Prefer the official Chrome Web
+                Store listing for install integrity.
+              </p>
             </div>
-            <div
-              class="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
-            >
-              <img
-                src="/PrivacyLensSite/assets/demo-DJvB4SjS.PNG"
-                alt=""
-                class="w-full max-w-none rounded-xl bg-gray-900 object-cover shadow-xl ring-1 ring-gray-400/10"
-              />
-            </div>
-            <div
-              class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8"
-            >
-              <div class="lg:pr-4">
-                <div class="max-w-xl text-base/7 text-white lg:max-w-lg">
-                  <ul role="list" class="mt-8 space-y-8 text-white">
-                    <li class="flex gap-x-3">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="mt-1 size-5 flex-none text-white"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
-                        />
-                      </svg>
-
-                      <span
-                        ><strong class="font-semibold text-sky-400"
-                          >Instant Privacy Policy Analysis</strong
-                        >
-                        <span>
-                          No more scrolling through 5,000 words of legal text.
-                        </span>
-                        <ul class="list-disc pt-1.5 pl-8">
-                          <li>
-                            Automatically detects and scans the website’s
-                            privacy policy
-                          </li>
-                          <li>Uses AI to extract the important parts only</li>
-                          <li>
-                            Works instantly while you browse—no copy/paste, no
-                            leaving the page
-                          </li>
-                        </ul></span
-                      >
-                    </li>
-                    <li class="flex gap-x-3">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="mt-1 size-5 flex-none text-white"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 0 1 9 9v.375M10.125 2.25A3.375 3.375 0 0 1 13.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 0 1 3.375 3.375M9 15l2.25 2.25L15 12"
-                        />
-                      </svg>
-
-                      <span
-                        ><strong class="font-semibold text-sky-400"
-                          >Simple AI-Powered Summaries</strong
-                        >
-                        <span
-                          >We translate legal language into plain,
-                          human-friendly explanations.</span
-                        >
-                        <ul class="list-disc pt-1.5 pl-8">
-                          <li>Clear summaries of what data is collected</li>
-                          <li>
-                            Easy-to-read explanations of how your data is used
-                          </li>
-                          <li>
-                            Straightforward answers to who your data is shared
-                            with
-                          </li>
-                        </ul>
-                        <p>
-                          No legal background required. If a policy is vague, we
-                          tell you that too.
-                        </p>
-                      </span>
-                    </li>
-                    <li class="flex gap-x-3">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="mt-1 size-5 flex-none text-white"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                        />
-                      </svg>
-
-                      <span
-                        ><strong class="font-semibold text-sky-400"
-                          >Visual Icons That Make Privacy Obvious</strong
-                        >
-                        <span>
-                          Words are easy to hide behind. Icons aren’t. <br />
-                          <br />
-                          Privacy Lens uses clear visual indicators for you
-                        </span>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div class="flex flex-col gap-2 text-sm">
+              <a
+                class="rounded-xl border border-white/15 bg-black/20 px-4 py-3 font-medium text-white transition-colors hover:border-sky-400/50 hover:text-sky-200"
+                href="/PrivacyLensSite/src/pages/privacyPolicy.html"
+                >Read the Privacy Policy</a>
+              <a
+                class="rounded-xl border border-white/15 bg-black/20 px-4 py-3 font-medium text-white transition-colors hover:border-sky-400/50 hover:text-sky-200"
+                href="/PrivacyLensSite/src/pages/termsOfService.html"
+                >Read the Terms of Service</a>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      <section
+        id="faq"
+        class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20"
+        aria-labelledby="faq-heading"
+      >
+        <h2
+          id="faq-heading"
+          class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+        >
+          FAQ
+        </h2>
+        <p class="mt-3 max-w-3xl text-base text-white/75 sm:text-lg">
+          Answers mirror the structured FAQ data on this page for consistency with
+          search engines.
+        </p>
+        <div class="mx-auto mt-10 max-w-3xl space-y-3">
+          <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <summary
+              class="cursor-pointer list-none text-base font-semibold text-white outline-offset-2 marker:content-none group-open:text-sky-300"
+            >
+              What is Privacy Lens?
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-white/75">
+              Privacy Lens is a free Chrome extension that acts as an AI browser
+              privacy assistant. It finds a site’s privacy policy, analyzes it with
+              AI, and presents a plain-language privacy policy summary plus
+              structured signals about data collection, use, and sharing.
+            </p>
+          </details>
+          <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <summary
+              class="cursor-pointer list-none text-base font-semibold text-white outline-offset-2 marker:content-none group-open:text-sky-300"
+            >
+              How does Privacy Lens summarize privacy policies?
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-white/75">
+              When you use the extension on a supported page, it helps locate the
+              policy text and runs an AI-powered analysis to extract the parts most
+              people care about: categories of data, purposes, retention hints where
+              available, and third parties. Results are shown as readable summaries
+              and visual privacy indicators.
+            </p>
+          </details>
+          <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <summary
+              class="cursor-pointer list-none text-base font-semibold text-white outline-offset-2 marker:content-none group-open:text-sky-300"
+            >
+              Is Privacy Lens only available as a Chrome privacy extension?
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-white/75">
+              Today, Privacy Lens is distributed on the Chrome Web Store for
+              Chromium-based Chrome browsers. Other browsers are not officially
+              supported yet.
+            </p>
+          </details>
+          <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <summary
+              class="cursor-pointer list-none text-base font-semibold text-white outline-offset-2 marker:content-none group-open:text-sky-300"
+            >
+              Is Privacy Lens a privacy policy analyzer or a website privacy checker?
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-white/75">
+              It functions as both in practice: it is a privacy policy analyzer
+              focused on policy text, and a website privacy checker in the sense
+              that it helps you quickly understand a site’s stated practices before
+              you proceed on that site.
+            </p>
+          </details>
+          <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <summary
+              class="cursor-pointer list-none text-base font-semibold text-white outline-offset-2 marker:content-none group-open:text-sky-300"
+            >
+              Does Privacy Lens help with terms of service as well?
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-white/75">
+              The product is optimized around privacy policies. Depending on the
+              site and version, related legal pages may be less thoroughly covered
+              than the primary privacy policy.
+            </p>
+          </details>
+          <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <summary
+              class="cursor-pointer list-none text-base font-semibold text-white outline-offset-2 marker:content-none group-open:text-sky-300"
+            >
+              Is Privacy Lens free?
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-white/75">
+              Privacy Lens is offered as a free extension. Optional donations may
+              be available to support development, but core functionality is aimed at
+              staying accessible.
+            </p>
+          </details>
+          <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <summary
+              class="cursor-pointer list-none text-base font-semibold text-white outline-offset-2 marker:content-none group-open:text-sky-300"
+            >
+              Does Privacy Lens replace reading the full policy or legal advice?
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-white/75">
+              No. Privacy Lens is an informational assistant designed to improve
+              transparency and save time. It does not replace your own review,
+              company disclosures, or professional legal advice where that is
+              required.
+            </p>
+          </details>
+          <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <summary
+              class="cursor-pointer list-none text-base font-semibold text-white outline-offset-2 marker:content-none group-open:text-sky-300"
+            >
+              How should I interpret AI-generated summaries?
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-white/75">
+              AI outputs can be incomplete or imperfect—especially when a policy is
+              vague, changes frequently, or uses non-standard language. Use
+              summaries as a starting point and verify important details on critical
+              flows like payments, health, or children’s data.
+            </p>
+          </details>
+          <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <summary
+              class="cursor-pointer list-none text-base font-semibold text-white outline-offset-2 marker:content-none group-open:text-sky-300"
+            >
+              Where can I read Privacy Lens privacy practices and updates?
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-white/75">
+              Use the Privacy Policy and What’s New pages linked in the site footer
+              and navigation. Those pages describe site/extension policies and
+              release notes context.
+            </p>
+          </details>
+          <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <summary
+              class="cursor-pointer list-none text-base font-semibold text-white outline-offset-2 marker:content-none group-open:text-sky-300"
+            >
+              Where do I install Privacy Lens?
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-white/75">
+              Install Privacy Lens from the official Chrome Web Store listing linked
+              from this page. Prefer the official store URL to avoid impersonation.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="mx-auto max-w-7xl px-4 pb-20 pt-4 sm:px-6 lg:px-8 lg:pb-28"
+        aria-labelledby="final-cta-heading"
+      >
+        <div
+          class="rounded-3xl border border-sky-500/30 bg-gradient-to-br from-sky-500/15 via-white/[0.04] to-transparent p-8 text-center shadow-[0_0_60px_-20px_rgba(56,189,248,0.55)] sm:p-12"
+        >
+          <h2
+            id="final-cta-heading"
+            class="text-2xl font-bold tracking-tight text-white sm:text-3xl"
+          >
+            Install Privacy Lens and make privacy policies easier to understand
+          </h2>
+          <p class="mx-auto mt-3 max-w-2xl text-sm text-white/75 sm:text-base">
+            If you want an
+            <strong class="font-semibold text-white">AI privacy scanner</strong>
+            that respects your time, start with the official Chrome Web Store
+            install—then come back to What’s New for release notes.
+          </p>
+          <div
+            class="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:justify-center"
+          >
+            <a
+              class="inline-flex items-center justify-center rounded-full bg-sky-400 px-8 py-3 text-base font-semibold text-slate-950 transition-transform hover:scale-[1.02]"
+              href="https://chromewebstore.google.com/detail/pdhcffjpfhnjkapmpeeepnnanjcmgcej?utm_source=item-share-cb"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Get the Chrome extension</a>
+            <a
+              class="inline-flex items-center justify-center rounded-full border border-white/20 bg-black/20 px-8 py-3 text-base font-semibold text-white transition-colors hover:border-sky-400/50"
+              href="https://www.buymeacoffee.com/SalehOmar"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Support development</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer
-      class="bg-base-200/60 flex flex-col items-center gap-4 p-6 text-amber-50"
+      class="border-t border-white/10 bg-black/30 px-4 py-10 text-amber-50 sm:px-6"
     >
       <div
-        class="text-base-content flex cursor-pointer flex-col items-center gap-2 text-xl font-bold hover:text-sky-400"
+        class="mx-auto flex max-w-7xl flex-col items-center gap-6 text-center sm:flex-row sm:items-start sm:justify-between sm:text-left"
       >
-        <div class="size-14">
-          <a href="index.html"
-            ><img src="/PrivacyLensSite/assets/icon-128-DYqFPOcu.png" alt="Privacy Lens logo"
-          /></a>
+        <div class="flex flex-col items-center gap-2 sm:items-start">
+          <a
+            href="/PrivacyLensSite/"
+            class="flex items-center gap-2 rounded-lg outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-400"
+          >
+            <img
+              src="/PrivacyLensSite/icons/icon-128.png"
+              width="56"
+              height="56"
+              alt="Privacy Lens logo"
+            />
+            <span class="text-xl font-bold text-white">Privacy Lens</span>
+          </a>
+          <p class="max-w-sm text-sm text-white/60">
+            AI-assisted privacy policy understanding for Chrome. Built for clarity,
+            not hype.
+          </p>
         </div>
-        <h1>Privacy Lens</h1>
-      </div>
-
-      <aside class="flex flex-col items-center gap-2">
-        <p>
-          ©<span id="current-year"></span>
-          <span class="font-medium">Made by Saleh Blhmr</span>
-        </p>
-
-        <!-- Social Media Icons -->
-        <div class="flex items-center gap-3">
-          <a
-            href="https://x.com/SB_WebDev"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex h-10 w-10 items-center justify-center rounded-md text-amber-50 transition-transform duration-200 hover:scale-110 hover:text-sky-400"
-            aria-label="X (Twitter)"
-          >
-            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-              />
-            </svg>
-          </a>
-
-          <a
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex hidden h-10 w-10 items-center justify-center rounded-md text-amber-50 transition-transform duration-200 hover:scale-110 hover:text-sky-400"
-            aria-label="LinkedIn"
-          >
-            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-              />
-            </svg>
-          </a>
-
-          <a
-            href="https://wa.me/966570121551"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex h-10 w-10 items-center justify-center rounded-md text-amber-50 transition-transform duration-200 hover:scale-110 hover:text-sky-400"
-            aria-label="WhatsApp"
-          >
-            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"
-              />
-            </svg>
-          </a>
-
-          <a
-            href="mailto:slo7ib@hotmail.com"
-            class="flex h-10 w-10 items-center justify-center rounded-md text-amber-50 transition-transform duration-200 hover:scale-110 hover:text-sky-400"
-            aria-label="Email"
-          >
-            <svg
-              class="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+        <aside class="text-sm text-white/70">
+          <p>
+            © <span id="current-year"></span>
+            <span class="font-medium text-white/85">Saleh Blhmr</span>
+          </p>
+          <div class="mt-3 flex flex-wrap justify-center gap-3 sm:justify-start">
+            <a
+              href="https://x.com/SB_WebDev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-md text-amber-50 transition-colors hover:text-sky-400"
+              aria-label="X (Twitter)"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              />
-            </svg>
-          </a>
-        </div>
-      </aside>
-
-      <nav
-        class="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 md:space-x-7"
-      >
-        <a
-          class="cursor-pointer hover:text-sky-400"
-          href="src/pages/termsOfService.html"
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/966570121551"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-md text-amber-50 transition-colors hover:text-sky-400"
+              aria-label="WhatsApp"
+            >
+              <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"
+                />
+              </svg>
+            </a>
+            <a
+              href="mailto:slo7ib@hotmail.com"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-md text-amber-50 transition-colors hover:text-sky-400"
+              aria-label="Email"
+            >
+              <svg
+                class="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </a>
+          </div>
+        </aside>
+        <nav
+          class="flex flex-col gap-2 text-sm text-white/80"
+          aria-label="Footer"
         >
-          Terms of Service
-        </a>
-        <a
-          class="cursor-pointer hover:text-sky-400"
-          href="mailto:slo7ib@hotmail.com"
-        >
-          Help
-        </a>
-        <a
-          class="cursor-pointer hover:text-sky-400"
-          href="src/pages/privacyPolicy.html"
-        >
-          Privacy Policy
-        </a>
-      </nav>
-    </footer>
+          <a class="hover:text-sky-400" href="/PrivacyLensSite/src/pages/termsOfService.html"
+            >Terms of Service</a>
+          <a class="hover:text-sky-400" href="mailto:slo7ib@hotmail.com">Help</a>
+          <a class="hover:text-sky-400" href="/PrivacyLensSite/src/pages/privacyPolicy.html"
+            >Privacy Policy</a>
+          <a class="hover:text-sky-400" href="/PrivacyLensSite/src/pages/whatsNew.html"
+            >What’s New</a>
+        </nav>
+      </div>
+    </footer>
+
   </body>
 </html>
