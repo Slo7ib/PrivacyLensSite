@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://slo7ib.github.io/PrivacyLensSite/sitemap.xml

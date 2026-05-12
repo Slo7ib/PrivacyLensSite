@@ -3,32 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What’s New for Privacy Lens: release notes and updates for the AI privacy policy summarizer Chrome extension."
+    />
+    <link
+      rel="canonical"
+      href="https://slo7ib.github.io/PrivacyLensSite/src/pages/whatsNew.html"
+    />
+    <meta property="og:title" content="What’s New — Privacy Lens" />
+    <meta
+      property="og:description"
+      content="Latest updates and news for the Privacy Lens Chrome extension."
+    />
+    <meta
+      property="og:url"
+      content="https://slo7ib.github.io/PrivacyLensSite/src/pages/whatsNew.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://slo7ib.github.io/PrivacyLensSite/icons/icon-128.png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="robots" content="index, follow" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/public/icons/icon-32.png"
+      href="/icons/icon-32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/public/icons/icon-16.png"
+      href="/icons/icon-16.png"
     />
     <link rel="stylesheet" href="/src/css/style.css" />
-
-    <title>Privacy Lens updates</title>
+    <title>What’s New — Privacy Lens Chrome Extension</title>
   </head>
   <body
-    class="relative min-h-screen bg-linear-to-br from-[#0b1f2a] to-[#020407]"
+    class="relative min-h-screen bg-linear-to-br from-[#0b1f2a] to-[#020407] text-[var(--color-fg)] antialiased"
   >
     <div
-      class="pointer-events-none fixed inset-0 bg-[url('/hex.svg')] bg-repeat opacity-[0.08]"
+      class="pointer-events-none fixed inset-0 bg-hex-grid bg-repeat opacity-[0.08]"
+      aria-hidden="true"
     ></div>
     <div
       class="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl"
+      aria-hidden="true"
     ></div>
-    <!-- Content -->
+
     <main>
       <div class="mx-auto max-w-7xl px-6 text-white">
         <header
@@ -36,47 +61,54 @@
         >
           <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between py-4">
-              <!-- Logo Section -->
               <div class="flex flex-shrink-0 items-center gap-2">
                 <a
-                  class="flex items-center space-x-2.5"
-                  href="../../index.html"
+                  href="/PrivacyLensSite/"
+                  class="flex items-center gap-2.5 rounded-lg outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-400"
                 >
                   <img
                     class="h-12 w-12 sm:h-14 sm:w-14"
-                    src="/public/icons/icon-128.png"
-                    alt="Privacy Lens"
+                    src="/icons/icon-128.png"
+                    width="56"
+                    height="56"
+                    alt="Privacy Lens extension icon"
                   />
-                  <h1 class="text-xl font-bold text-white sm:text-2xl">
-                    Privacy Lens
-                  </h1></a
-                >
+                  <span class="text-xl font-bold text-white sm:text-2xl">Privacy Lens</span>
+                </a>
               </div>
 
-              <!-- Desktop Navigation -->
-              <nav class="hidden items-center space-x-8 md:flex">
+              <nav
+                class="hidden items-center space-x-8 md:flex"
+                aria-label="Primary"
+              >
                 <a
-                  href="../../index.html"
+                  href="/PrivacyLensSite/"
                   class="font-medium text-white/90 transition-colors duration-200 hover:text-sky-400"
                 >
                   Home
                 </a>
-
                 <a
-                  href="privacyPolicy.html"
+                  href="/PrivacyLensSite/src/pages/privacyPolicy.html"
                   class="font-medium text-white/90 transition-colors duration-200 hover:text-sky-400"
                 >
                   Privacy Policy
                 </a>
               </nav>
 
-              <!-- Mobile Menu Button -->
-              <button id="mobile-menu-btn" class="p-2 text-white md:hidden">
+              <button
+                id="mobile-menu-btn"
+                type="button"
+                class="p-2 text-white md:hidden"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+                aria-label="Open menu"
+              >
                 <svg
                   class="h-6 w-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     stroke-linecap="round"
@@ -88,17 +120,19 @@
               </button>
             </div>
 
-            <!-- Mobile Navigation -->
-            <nav id="mobile-menu" class="hidden space-y-3 pb-4 md:hidden">
+            <nav
+              id="mobile-menu"
+              class="hidden space-y-3 pb-4 md:hidden"
+              aria-label="Mobile primary"
+            >
               <a
-                href="../../index.html"
+                href="/PrivacyLensSite/"
                 class="block rounded-lg px-4 py-2 text-white/90 transition-all duration-200 hover:bg-white/10 hover:text-white"
               >
                 Home
               </a>
-
               <a
-                href="privacyPolicy.html"
+                href="/PrivacyLensSite/src/pages/privacyPolicy.html"
                 class="block rounded-lg px-4 py-2 text-white/90 transition-all duration-200 hover:bg-white/10 hover:text-white"
               >
                 Privacy Policy
@@ -108,71 +142,89 @@
         </header>
 
         <section
-          class="mt-11 flex h-3/5 w-full flex-col items-center text-center"
+          class="mx-auto mt-11 flex max-w-3xl flex-col items-center px-4 pb-16 text-center sm:px-0"
+          aria-labelledby="whats-new-heading"
         >
-          <article>
-            <h1 class="px-56 font-sans text-6xl font-bold">What's New</h1>
-          </article>
-          <p class="mt-2 w-2/5">
-            Stay up to date with the latest news and updates from Privacy Lens.
-          </p>
-          <h1 class="my-2.5 text-2xl text-amber-500">
-            Your donation keeps this working
+          <h1
+            id="whats-new-heading"
+            class="text-balance text-4xl font-bold tracking-tight sm:text-5xl"
+          >
+            What’s New
           </h1>
-          <div class="transform transition-all duration-300 hover:scale-105">
-            <script
-              type="text/javascript"
-              src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-              data-name="bmc-button"
-              data-slug="SalehOmar"
-              data-color="#FFDD00"
-              data-emoji=""
-              data-font="Cookie"
-              data-text="Buy me a coffee"
-              data-outline-color="#000000"
-              data-font-color="#000000"
-              data-coffee-color="#ffffff"
-            ></script>
-          </div>
+          <p class="mt-4 max-w-xl text-lg text-white/80">
+            Stay up to date with the latest news and updates from Privacy Lens—the
+            Chrome extension that helps you understand privacy policies with AI.
+          </p>
+          <h2 class="mt-10 text-xl font-semibold text-amber-400">
+            Support keeps Privacy Lens moving forward
+          </h2>
+          <p class="mt-2 max-w-md text-sm text-white/65">
+            Optional contributions help cover development and hosting costs for
+            this free privacy transparency tool.
+          </p>
+          <a
+            class="mt-6 inline-flex items-center justify-center rounded-full border border-amber-400/40 bg-amber-400/10 px-8 py-3 text-base font-semibold text-amber-100 transition-colors hover:border-amber-300 hover:bg-amber-400/20"
+            href="https://www.buymeacoffee.com/SalehOmar"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Support on Buy Me a Coffee
+          </a>
         </section>
       </div>
     </main>
 
     <footer
-      class="bg-base-200/60 flex flex-col items-center gap-4 p-6 text-amber-50"
+      class="border-t border-white/10 bg-black/30 px-4 py-10 text-amber-50 sm:px-6"
     >
       <div
-        class="text-base-content flex cursor-pointer flex-col items-center gap-2 text-xl font-bold hover:text-sky-400"
+        class="mx-auto flex max-w-7xl flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left"
       >
-        <div class="size-14">
-          <img class="" src="/public/icons/icon-128.png" alt="" />
+        <div class="flex flex-col items-center gap-2 sm:items-start">
+          <a
+            href="/PrivacyLensSite/"
+            class="flex items-center gap-2 rounded-lg outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-400"
+          >
+            <img
+              class="size-14"
+              src="/icons/icon-128.png"
+              width="56"
+              height="56"
+              alt="Privacy Lens logo"
+            />
+            <span class="text-xl font-bold text-white">Privacy Lens</span>
+          </a>
         </div>
-
-        <h1>Privacy Lens</h1>
-      </div>
-      <aside>
-        <p>
-          ©<span id="current-year"></span>
-          <span class="font-medium">Made by Saleh Blhmr</span>
-        </p>
-      </aside>
-      <nav
-        class="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 md:space-x-7"
-      >
-        <a class="cursor-pointer hover:text-sky-400" href="termsOfService.html">
-          Terms of Service
-        </a>
-        <a
-          class="cursor-pointer hover:text-sky-400"
-          href="mailto:slo7ib@hotmail.com"
+        <aside class="text-sm text-white/70">
+          <p>
+            © <span id="current-year"></span>
+            <span class="font-medium text-white/85">Made by Saleh Blhmr</span>
+          </p>
+        </aside>
+        <nav
+          class="flex flex-col items-center gap-2 text-sm sm:items-end"
+          aria-label="Footer"
         >
-          Help
-        </a>
-
-        <a class="cursor-pointer hover:text-sky-400" href="privacyPolicy.html">
-          Privacy Policy
-        </a>
-      </nav>
+          <a
+            class="text-white/80 hover:text-sky-400"
+            href="/PrivacyLensSite/src/pages/termsOfService.html"
+          >
+            Terms of Service
+          </a>
+          <a
+            class="text-white/80 hover:text-sky-400"
+            href="mailto:slo7ib@hotmail.com"
+          >
+            Help
+          </a>
+          <a
+            class="text-white/80 hover:text-sky-400"
+            href="/PrivacyLensSite/src/pages/privacyPolicy.html"
+          >
+            Privacy Policy
+          </a>
+        </nav>
+      </div>
     </footer>
     <script type="module" src="/src/js/main.js"></script>
   </body>
